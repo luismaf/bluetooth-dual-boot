@@ -1,5 +1,5 @@
 # Bluetooth-dual-boot
-This will help you to setup a Bluetooth device in Linux (Ubuntu 21.04) and Windows 10 without having to pair it on every boot. *If you have more than one BT device is useful to prior remove them all and add them one by one.*
+This will help you to setup a Bluetooth device in dual boot: Linux (Ubuntu 21.04) and Windows 10 without having to pair it on every boot. *If you have more than one BT device is useful to prior remove them all and add them one by one.*
 
  1. Pair it in Ubuntu, reboot.
  2. Pair it on Windows. Yes, this will remove the paring in Ubuntu, just carry on. 
