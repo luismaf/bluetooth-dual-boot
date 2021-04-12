@@ -1,9 +1,9 @@
-# Bluetooth-dual-boot
-This will help you to setup a Bluetooth device in dual boot: Linux (Ubuntu 21.04) and Windows 10 without having to pair it on every boot. *If you have more than one BT device is useful to prior remove them all and add them one by one.*
+# bluetooth-dual-boot
+This will help you to setup a bluetooth device in dual boot: Linux (Ubuntu 21.04) and Windows 10 without having to pair it on every boot. *If you have more than one BT device could be useful to prior remove them all and then add them one by one.*
 
  1. Pair it in Ubuntu, reboot.
  2. Pair it on Windows. Yes, this will remove the paring in Ubuntu, just carry on. 
- 3. Now in Windows, run `bt_key.bat` as Administrator, this will generate the file `c:\win_keys.txt`, you'll need this file in Ubuntu, move it if you need to, it will look like this:
+ 3. Now in Windows, run `bt_key.bat` *as Administrator*, this will generate the file `c:\win_keys.txt`, you'll need this file in Ubuntu, move it if you need to, it will look like this:
 ```
 Windows Registry Editor Version 5.00
 
@@ -25,15 +25,15 @@ Windows Registry Editor Version 5.00
 ```
  4. Power off the bluetooth device. 
  5. Now boot to Ubuntu, you can disable the Bluetooth if you want to.
- 6. Edit the `ubuntu_keys.py` script, replace the mocked values with the ones generated in `win_keys.txt`. For example:
+ 6. Edit the `ubuntu_keys.py` script, replace the mock values with the ones generated in `win_keys.txt`. For example:
  ```
- LTK = "af,ba,0b,39,32,66,c0,cc,17,b6,dc,da,cc,4f,5e,1f"
+LTK = "af,ba,0b,39,32,66,c0,cc,17,b6,dc,da,cc,4f,5e,1f"
 KeyLength = "00000010"
 ERand = "20,dd,df,fa,77,9a,67,11"
 EDIV = "0000f374"
 IRK = "4f,d5,a1,5a,43,c2,9f,d4,7f,e0,43,ad,8a,af,3b,27"
  ```
- 6. Open a Terminal and run the script `python ubuntu_keys.py`. If you need to install Python, use this command `sudo apt-get install python`. This 'll output something like this:
+ 6. Open a *Terminal* and run the script `python ubuntu_keys.py`. If you need to install Python, use this command `sudo apt-get install python`. This will output something like this:
  ```
  [IdentityResolvingKey]
 Key=4FD5A15A43C29FD47FE043AD8AAF3B27
